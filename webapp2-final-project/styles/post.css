@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  background-color: #212121;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins';
+  font-size: 60px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #8d8383;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #202324bb, #4e4e86b6 50%, #635468ce);
+}
+
+.post-container {
+  display: block;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.post-container ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#postLists li {
+  width: 150px;
+  margin: 20px;
+  height: 250px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  background: #5e5a5a;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#postLists li img {
+  max-width: 100% !important;
+  object-fit: cover;
+  height: auto;
+}
+
+#postLists .product-link {
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-size: 13px;
+  color: #00587a;
+}
+
+#postLists .product-link:hover {
+  text-decoration: underline;
+}
+
+.ul {
+  margin-top: 10px;
+}
+
+#SearchBar {
+  padding: 10px;
+  border: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 2px solid;
+  outline: none;
+  background-color: rgb(71, 66, 66);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  background-color: #3d2074;
+}
+
+#logoutBtn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3d2074;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+#logoutBtn:hover {
+  background-color: #5a3ba0;
+}
+
+
+@media (max-width: 768px) {
+  .page-title {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  #postLists li {
+    width: 100px;
+    height: 210px;
+  }
+}
+
+@media (max-width: 430px) {
+  .post-container {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  #postLists li {
+    width: 80px;
+    height: 160px;
+  }
+
+  #postLists .product-link {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 10px;
+  }
+
+  .post-container {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+
+  #postLists li {
+    width: 60px;
+    height: 120px;
+  }
+
+  #postLists .product-link {
+    font-size: 8px;
+  }
+}
